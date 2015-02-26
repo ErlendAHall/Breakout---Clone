@@ -8,6 +8,7 @@
 - Ball
 - High score UI
 - Lyd -og partikkeleffekter
+- Hovedmeny (Start/Avslutt)
 - Minst ett nytt gameplay-element
 
 
