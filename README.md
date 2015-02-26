@@ -24,4 +24,10 @@
 - "Hvis ballen treffer veggen bak brikkene (altså på toppen av skjermen) blir spaden sin bredde halvert
 en gang frem til turen er over."
 
+# Hva som kan gjøres
+- 
+
+
+
+
 
