@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class brick : MonoBehaviour {
+public class brickSpawn : MonoBehaviour {
     public int bricksInX = 10;
     public int bricksInY = 6;
     public GameObject prefabBrick;
