@@ -15,9 +15,12 @@ public class brickSpawn : MonoBehaviour {
 
 	void Start () 
     {
-        for (int y = 0; y < bricksInY; y++)
+        Transform _t = GetComponent<Transform>();
+        int currentY = (int)_t.position.y;
+        int currentX = (int)_t.position.x;
+        for (int y = currentY; y < currentY+bricksInY; y++)
         {
-            for (int x = 0; x < bricksInX; x++)
+            for (int x = currentX; x < currentX+bricksInX; x++)
             {
                 GameObject brick = (Instantiate(prefabBrick, new Vector3(x*0.7f, y*0.5f, 0), Quaternion.identity)) as GameObject;
                 brick.GetComponent<SpriteRenderer>().sprite = brickSprites[y];
