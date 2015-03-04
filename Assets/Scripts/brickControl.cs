@@ -9,10 +9,10 @@ public class brickControl : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Scored " + score + " points");
         health--;
         if (health <= 0)
         {
+            Debug.Log("Scored " + score + " points");
             Destroy(gameObject);
         }
     }
