@@ -12,6 +12,7 @@ public class brickControl : MonoBehaviour {
         health--;
         if (health <= 0)
         {
+            GameObject.FindGameObjectWithTag("gm").GetComponent<gameController>().addScore(score);
             Debug.Log("Scored " + score + " points");
             Destroy(gameObject);
         }

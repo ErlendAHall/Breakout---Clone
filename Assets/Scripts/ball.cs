@@ -35,5 +35,10 @@ public class ball : MonoBehaviour
         {
             rigidbody2D.velocity /= currentSpeed / 5f;
         }
+        if (playBall.position.y < -4.25f)
+        {
+            GameObject.FindGameObjectWithTag("gm").GetComponent<gameController>().decreaseLife();
+            playBall.position = new Vector2(0, -1);
+        }
     }
 }
