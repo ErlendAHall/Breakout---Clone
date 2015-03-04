@@ -16,14 +16,14 @@ public class brickSpawn : MonoBehaviour {
 	void Start () 
     {
         Transform _t = GetComponent<Transform>();
-        int currentY = (int)_t.position.y;
-        int currentX = (int)_t.position.x;
-        for (int y = currentY; y < currentY+bricksInY; y++)
+        float currentY = _t.position.y;
+        float currentX = _t.position.x;
+        for (float y = currentY; y < currentY+bricksInY; y++)
         {
-            for (int x = currentX; x < currentX+bricksInX; x++)
+            for (float x = currentX; x < currentX+bricksInX; x++)
             {
                 GameObject brick = (Instantiate(prefabBrick, new Vector3(x*0.7f, y*0.5f, 0), Quaternion.identity)) as GameObject;
-                brick.GetComponent<SpriteRenderer>().sprite = brickSprites[y];
+                brick.GetComponent<SpriteRenderer>().sprite = brickSprites[(int)y];
             }
         }
 	}

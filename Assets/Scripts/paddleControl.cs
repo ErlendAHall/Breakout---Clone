@@ -6,7 +6,7 @@ public class paddleControl : MonoBehaviour
 
     public float paddleSpeed = 0.5f;
     private Vector2 paddlePosition = new Vector2(0f, -4.25f);
-    private float clampLenght = 8f;
+    private float clampLenght = 7.3f;
 
     void Start()
     {
