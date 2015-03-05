@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\gameController.cs" />
     <Compile Include="Assets\Scripts\paddleControl.cs" />
     <Compile Include="Assets\Scripts\pauseButton.cs" />
+    <Compile Include="Assets\Scripts\restartGame.cs" />
     <Compile Include="Assets\Scripts\roofScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
