@@ -28,14 +28,16 @@ public class gameController : MonoBehaviour {
     public void addScore(int score)
     {
         gameScore += score;
+		if (gameScore > 40) {
+			Application.LoadLevel("youWon");
+		}
     }
 
     public void decreaseLife()
     {
         life--;
-        if (life <= 0)
-        {
-            Application.LoadLevel("gameOver");
-        }
+        if (life <= 0) {
+			Application.LoadLevel ("gameOver");
+		} 
     }
 }
