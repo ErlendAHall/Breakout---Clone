@@ -14,10 +14,10 @@ public class brickControl : MonoBehaviour {
         if (health <= 0)
         {
             GameObject.FindGameObjectWithTag("gm").GetComponent<gameController>().addScore(score);
-            Debug.Log("Scored " + score + " points");
+            //Debug.Log("Scored " + score + " points");
             Destroy(gameObject);
-        }
-		Instantiate(brickParticles, gameObject.transform.position, Quaternion.identity);
+            Instantiate(brickParticles, gameObject.transform.position, Quaternion.identity);
+        }		
     }
 
     void setScore(int score)
