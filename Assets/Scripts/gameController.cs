@@ -54,4 +54,9 @@ public class gameController : MonoBehaviour {
            Application.LoadLevel("youWon");
         }
     }
+
+    public void increaseHealth()
+    {
+        life++;
+    }
 }
