@@ -6,7 +6,8 @@ public class ball : MonoBehaviour
 
     public float ballInitSpeed = 600f;
     public float ballMaxSpeed = 15f;
-    public float ballMinSpeed = 7f;
+    public float ballMinSpeed = 5f;
+    public int bounces = 0;
 
     private Rigidbody2D playBall;
     private bool inPlay = false;
@@ -45,6 +46,24 @@ public class ball : MonoBehaviour
             playBall.velocity = Vector2.zero;
             playBall.angularVelocity = 0f;
             inPlay = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag.Equals("paddle"))
+        {
+            bounces++;
+            if (bounces == 4 || bounces == 12)
+            {
+                ballMinSpeed += 2f;
+                ballMaxSpeed += 2f;
+            }
+        }
+        else if (collision.collider.GetComponent<brickControl>().score >= 50)
+        {
+            ballMinSpeed += 0.2f;
+            ballMaxSpeed += 0.2f;
         }
     }
 }
