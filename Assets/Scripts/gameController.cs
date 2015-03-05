@@ -7,6 +7,8 @@ public class gameController : MonoBehaviour {
 
     private int gameScore = 0;
     private int life = 3;
+    public int bricksDestroyed = 0;
+    public int bricksSpawned = 0;
 
     private Text scoreText;
     private Text healthText;
@@ -28,9 +30,7 @@ public class gameController : MonoBehaviour {
     public void addScore(int score)
     {
         gameScore += score;
-		if (gameScore > 40) {
-			Application.LoadLevel("youWon");
-		}
+		
     }
 
     public void decreaseLife()
@@ -39,5 +39,19 @@ public class gameController : MonoBehaviour {
         if (life <= 0) {
 			Application.LoadLevel ("gameOver");
 		} 
+    }
+
+    public void setBricks(int bricks)
+    {
+        bricksSpawned = bricks;
+    }
+
+    public void destroyBrick()
+    {
+        bricksDestroyed++;
+        if (bricksSpawned <= bricksDestroyed)
+        {
+           Application.LoadLevel("youWon");
+        }
     }
 }

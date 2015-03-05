@@ -15,6 +15,7 @@ public class brickSpawn : MonoBehaviour {
 
 	void Start () 
     {
+        GameObject.FindGameObjectWithTag("gm").GetComponent<gameController>().setBricks(bricksInX * bricksInY);
         Transform _t = GetComponent<Transform>();
         float currentY = _t.position.y;
         float currentX = _t.position.x;

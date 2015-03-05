@@ -5,9 +5,9 @@ public class ball : MonoBehaviour
 {
 
     public float ballInitSpeed = 600f;
-    public float ballMaxSpeed = 15f;
-    public float ballMinSpeed = 5f;
-    public int bounces = 0;
+    private float ballMaxSpeed = 15f;
+    private float ballMinSpeed = 5f;
+    private int bounces = 0;
 
     private Rigidbody2D playBall;
     private bool inPlay = false;
@@ -60,7 +60,7 @@ public class ball : MonoBehaviour
                 ballMaxSpeed += 2f;
             }
         }
-        else if (collision.collider.GetComponent<brickControl>().score >= 50)
+        else if (collision.collider.tag.Equals("brick") && collision.collider.GetComponent<brickControl>().score >= 50)
         {
             ballMinSpeed += 0.2f;
             ballMaxSpeed += 0.2f;
