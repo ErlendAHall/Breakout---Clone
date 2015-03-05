@@ -49,6 +49,7 @@ public class gameController : MonoBehaviour {
     public void destroyBrick()
     {
         bricksDestroyed++;
+        audio.Play();
         if (bricksSpawned <= bricksDestroyed)
         {
            Application.LoadLevel("youWon");

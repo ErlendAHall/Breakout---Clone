@@ -18,9 +18,15 @@ public class brickControl : MonoBehaviour {
             controller.destroyBrick();
             //GameObject.FindGameObjectWithTag("gm").GetComponent<gameController>().addScore(score);
             //Debug.Log("Scored " + score + " points");
+            //audio.PlayOneShot(brick_destroy, 1F);
             Destroy(gameObject);
             Instantiate(brickParticles, gameObject.transform.position, Quaternion.identity);
-        }		
+        }
+        else
+        {
+            audio.Play();
+        }
+        
     }
 
     void setScore(int score)
