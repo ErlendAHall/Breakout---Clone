@@ -6,7 +6,7 @@ public class gameController : MonoBehaviour {
 
 
     private int gameScore = 0;
-    private int life = 5;
+    private int life = 3;
 
     private Text scoreText;
     private Text healthText;

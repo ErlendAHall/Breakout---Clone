@@ -13,16 +13,8 @@
 
 
 # Hva som må gjøres (Koding)
-- Kollisjon (Vegger og brikker)
-- Ballspretting
-- Pausefunksjon
-- Failstate
 - Gjenta spillet etter fullføring
 - Minst ett nytt gameplay-element
-- Scorecount basert på brikkefarge
-- 3 sjanser
-- "Hvis ballen treffer veggen bak brikkene (altså på toppen av skjermen) blir spaden sin bredde halvert
-en gang frem til turen er over."
 
 # Hva som kan gjøres
 - 
