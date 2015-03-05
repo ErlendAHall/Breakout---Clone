@@ -62,8 +62,8 @@ public class ball : MonoBehaviour
         }
         else if (collision.collider.tag.Equals("brick") && collision.collider.GetComponent<brickControl>().score >= 50)
         {
-            ballMinSpeed += 0.2f;
-            ballMaxSpeed += 0.2f;
+            ballMinSpeed += 0.05f;
+            ballMaxSpeed += 0.05f;
         }
     }
 }

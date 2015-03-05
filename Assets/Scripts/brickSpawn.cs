@@ -34,11 +34,18 @@ public class brickSpawn : MonoBehaviour {
                 }
                 else
                 {
-                    //mode 1 = health powerup
-                    brick.GetComponent<brickControl>().mode = 1;
+                    ran = Random.Range(1, 3);
+                    brick.GetComponent<brickControl>().mode = ran;
                     brick.GetComponent<brickControl>().score = 100;
                     brick.GetComponent<brickControl>().health = 1;
-                    brick.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("healthBrick");
+                    if (ran == 1)
+                    {
+                        brick.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("healthBrick");
+                    }
+                    else
+                    {
+                        brick.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("paddlePower");
+                    }
                 }
             }
             count++;

@@ -25,4 +25,10 @@ public class paddleControl : MonoBehaviour
         transform.localScale = new Vector3(transform.localScale.x / 2, transform.localScale.y, transform.localScale.z);
         clampLenght += 0.6f;
     }
+
+    public void increaseScale()
+    {
+        transform.localScale = new Vector3(transform.localScale.x + 0.25f, transform.localScale.y, transform.localScale.z);
+        clampLenght -= 0.2f;
+    }
 }

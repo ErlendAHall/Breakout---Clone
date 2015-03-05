@@ -26,6 +26,10 @@ public class brickControl : MonoBehaviour {
             {
                 controller.increaseHealth();
             }
+            else if (mode == 2)
+            {
+                GameObject.FindGameObjectWithTag("paddle").GetComponent<paddleControl>().increaseScale();
+            }
         }
         else
         {
