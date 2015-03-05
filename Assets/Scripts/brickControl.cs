@@ -6,6 +6,7 @@ public class brickControl : MonoBehaviour {
 
     public int score = 10;
     public int health = 1;
+    public int mode = 0;
 	public GameObject brickParticles;
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -21,6 +22,10 @@ public class brickControl : MonoBehaviour {
             //audio.PlayOneShot(brick_destroy, 1F);
             Destroy(gameObject);
             Instantiate(brickParticles, gameObject.transform.position, Quaternion.identity);
+            if (mode == 1)
+            {
+                controller.increaseHealth();
+            }
         }
         else
         {

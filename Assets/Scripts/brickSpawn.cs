@@ -26,17 +26,19 @@ public class brickSpawn : MonoBehaviour {
             for (float x = currentX; x < currentX+bricksInX; x++)
             {
                 int ran = Random.Range(0, 50);
+                GameObject brick = (Instantiate(prefabBrick, new Vector3(x * 0.7f, y * 0.5f, 0), Quaternion.identity)) as GameObject;
                 if (ran > 0) { 
-                GameObject brick = (Instantiate(prefabBrick, new Vector3(x*0.7f, y*0.5f, 0), Quaternion.identity)) as GameObject;
-                brick.GetComponent<SpriteRenderer>().sprite = brickSprites[(int)y];
-                brick.GetComponent<brickControl>().score = count*10;
-                brick.GetComponent<brickControl>().health = count;
+                    brick.GetComponent<SpriteRenderer>().sprite = brickSprites[(int)y];
+                    brick.GetComponent<brickControl>().score = count*10;
+                    brick.GetComponent<brickControl>().health = count;
                 }
                 else
                 {
-                    GameObject brick = (Instantiate(healthBrick, new Vector3(x * 0.7f, y * 0.5f, 0), Quaternion.identity)) as GameObject;
-                    brick.GetComponent<healthPowerup>().score = 100;
-                    brick.GetComponent<healthPowerup>().health = 1;
+                    //mode 1 = health powerup
+                    brick.GetComponent<brickControl>().mode = 1;
+                    brick.GetComponent<brickControl>().score = 100;
+                    brick.GetComponent<brickControl>().health = 1;
+                    brick.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("healthBrick");
                 }
             }
             count++;
