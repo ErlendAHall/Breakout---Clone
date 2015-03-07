@@ -3,6 +3,7 @@ using System.Collections;
 
 public class roofScript : MonoBehaviour {
 
+    public AudioClip roofSound;
     GameObject paddle;
     bool paddleHalfed = false;
 
@@ -16,6 +17,7 @@ public class roofScript : MonoBehaviour {
         {
             paddleHalfed = true;
             paddle.GetComponent<paddleControl>().decreaseScale();
+            AudioSource.PlayClipAtPoint(roofSound, transform.position);
         }
     }
 }

@@ -12,6 +12,9 @@ public class ball : MonoBehaviour
     private Rigidbody2D playBall;
     private bool inPlay = false;
     private float currentSpeed = 0;
+
+    public AudioClip smackSound, endSound;
+    private bool hit;
     void Awake()
     {
         playBall = GetComponent<Rigidbody2D>();
@@ -25,6 +28,7 @@ public class ball : MonoBehaviour
             inPlay = true;
             playBall.AddForce(new Vector2(ballInitSpeed, -ballInitSpeed));
         }
+      
     }
 
     void FixedUpdate()
@@ -46,11 +50,18 @@ public class ball : MonoBehaviour
             playBall.velocity = Vector2.zero;
             playBall.angularVelocity = 0f;
             inPlay = false;
+            AudioSource.PlayClipAtPoint(endSound, transform.position);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!hit)
+        {
+            AudioSource.PlayClipAtPoint(smackSound, transform.position);
+            hit = true;
+        }
+
         if (collision.collider.tag.Equals("paddle"))
         {
             bounces++;
@@ -65,5 +76,9 @@ public class ball : MonoBehaviour
             ballMinSpeed += 0.05f;
             ballMaxSpeed += 0.05f;
         }
+    }
+
+    void OnCollisionExit2D(Collision2D other) {
+            hit = false;
     }
 }
