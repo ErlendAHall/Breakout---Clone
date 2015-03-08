@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4101DE59-77D5-EB4E-12BD-AF34461DE9EB}</ProjectGuid>
+	<ProjectGuid>{B6938AF6-AF84-6349-5F14-0E650FDC91F3}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -39,25 +39,23 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>F:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>F:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ball.cs" />
      <Compile Include="Assets\Scripts\brickControl.cs" />
      <Compile Include="Assets\Scripts\brickSpawn.cs" />
-     <Compile Include="Assets\Scripts\exitGame.cs" />
      <Compile Include="Assets\Scripts\gameController.cs" />
      <Compile Include="Assets\Scripts\menuControls.cs" />
      <Compile Include="Assets\Scripts\paddleControl.cs" />
      <Compile Include="Assets\Scripts\pauseButton.cs" />
-     <Compile Include="Assets\Scripts\restartGame.cs" />
      <Compile Include="Assets\Scripts\roofScript.cs" />
  <Reference Include="UnityEngine.UI">
- <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
