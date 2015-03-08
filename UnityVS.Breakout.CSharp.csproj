@@ -57,7 +57,9 @@
     <Compile Include="Assets\Scripts\ball.cs" />
     <Compile Include="Assets\Scripts\brickControl.cs" />
     <Compile Include="Assets\Scripts\brickSpawn.cs" />
+    <Compile Include="Assets\Scripts\exitGame.cs" />
     <Compile Include="Assets\Scripts\gameController.cs" />
+    <Compile Include="Assets\Scripts\menuControls.cs" />
     <Compile Include="Assets\Scripts\paddleControl.cs" />
     <Compile Include="Assets\Scripts\pauseButton.cs" />
     <Compile Include="Assets\Scripts\restartGame.cs" />
